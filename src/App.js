@@ -4,6 +4,7 @@ import Meals from "./Components/Meals/Meals";
 import Cart from "./Components/Cart/Cart";
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
+  // const ShowCartStatus = createContext();
   const showCartHandler = () => {
     setCartIsShown(true);
   };
@@ -13,7 +14,9 @@ function App() {
   return (
     <Fragment>
       {cartIsShown && <Cart hideCart={hideCartHandler} />}
+      {/* <ShowCartStatus.Provider value={{ cartIsShown, setCartIsShown }}> */}
       <Header showCart={showCartHandler} />
+      {/* </ShowCartStatus.Provider> */}
       <main>
         <Meals />
       </main>

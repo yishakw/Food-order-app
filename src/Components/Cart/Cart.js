@@ -1,6 +1,6 @@
 import classes from "./Cart.module.css";
 import Modal from "../Meals/Modal";
-const Cart = ({ showCart, hideCart }) => {
+const Cart = ({ hideCart }) => {
   const cartItems = (
     <ul>
       {[{ id: "c1", name: "sushi", amount: "2", price: "12.99" }].map(
